@@ -43,7 +43,7 @@ Set <- cbind(subjects, fActivities, Set)
 names(Set)[2] <- "activity"
 
 # 12. Create a second, independent tidy data set with the average of each variable for each activity and each subject.
-
+library(reshape2)
 SetMelt <- melt(Set, id=c("person_id","activity"), measure.vars = names(Set)[3:length(names(Set))])
 averageSet <- dcast(SetMelt, ...~variable,mean)
 
