@@ -1,5 +1,3 @@
-setwd('Getting and Cleaning Data - Course Project')
-
 activity_labels <- read.table("UCI HAR Dataset\\activity_labels.txt", col.names=c("activity_id","activity_label"))
 
 activities1 <- read.table('UCI HAR Dataset\\train\\y_train.txt', col.names="activity_id")
